@@ -10,7 +10,7 @@ useEffect(()=>{
   setNoteArray(JSON.parse(localStorage.getItem('newObject')))
 },[])
 
-  const filteredNotes = noteArray.filter(note =>
+  const filteredNotes = noteArray?.filter(note =>
     note.title.toLowerCase().includes(searchBar.toLowerCase())
   );
   return (
