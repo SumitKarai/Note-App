@@ -75,7 +75,7 @@ function saveEdit()
         <Button variant="success" className="topMargin" onClick={()=>addNote()} disabled={addNoteControl===0?true:titleGet&&descriptionGet?false:true} >Add Note</Button>
         <Button className="topMargin" value={editBtn} onClick={()=>saveEdit()} disabled={editBtn===0?true:titleGet&&descriptionGet?false:true}>Save Edit</Button>
         <hr />
-        {noteArray.map((item,index)=>(
+        {noteArray?.map((item,index)=>(
             <Card key={index} >
       
       <Card.Body className="animate">
